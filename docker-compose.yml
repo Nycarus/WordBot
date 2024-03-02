@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  wordbot:
+    container_name: WordBot
+    image: wordbot
+    restart: on-failure:3
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "${BOT_PORT}"
+    networks:
+      - word-bot-networks
+    env_file: .env
+    volumes:
+      - ./data:/data
+      - .:/app
+
+networks:
+  word-bot-networks:
+    driver: bridge

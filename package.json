@@ -1,0 +1,16 @@
+{
+  "name": "wordbot",
+  "version": "1.0.0",
+  "description": "Discord bot that finds the most common phrases and words of everyone in a server.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anthony Huang",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.5"
+  }
+}
